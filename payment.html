@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment</title>
+  <style>
+    /* CSS for styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    section {
+      margin: 20px auto;
+      width: 80%;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"], input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #555;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Payment</h1>
+    <img src="sudkick.png" alt="Sudkick Logo" width="200">
+  </header>
+  
+  <!-- Credit/Debit Details Section -->
+  <section id="credit-debit-details">
+    <h2>Credit/Debit Details</h2>
+    <form action="#" method="post">
+      <label for="cardno">Card Number:</label>
+      <input type="text" id="cardno" name="cardno" required><br>
+      <label for="expiry">Expiry Date:</label>
+      <input type="text" id="expiry" name="expiry" placeholder="MM/YYYY" required><br>
+      <label for="cvv">CVV:</label>
+      <input type="number" id="cvv" name="cvv" min="100" max="999" required><br>
+      <label for="zip">ZIP Code:</label>
+      <input type="text" id="zip" name="zip" required><br>
+      <button type="submit">Submit Payment</button>
+    </form>
+  </section>
+
+  <!-- Billing Address Section -->
+  <section id="billing-address">
+    <h2>Billing Address</h2>
+    <form action="#" method="post">
+      <label for="address1">Address Line 1:</label>
+      <input type="text" id="address1" name="address1" required><br>
+      <label for="address2">Address Line 2:</label>
+      <input type="text" id="address2" name="address2"><br>
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" required><br>
+      <label for="state">State:</label>
+      <input type="text" id="state" name="state" required><br>
+      <label for="country">Country:</label>
+      <select id="country" name="country" required>
+        <option value="">Select Country</option>
+        <option value="USA">United States</option>
+        <option value="UK">United Kingdom</option>
+        <option value="CA">Canada</option>
+        <!-- Add more countries as needed -->
+      </select><br>
+      <label for="billing-zip">ZIP Code:</label>
+      <input type="text" id="billing-zip" name="billing-zip" required><br>
+      <button type="submit">Submit Address</button>
+    </form>
+  </section>
+
+</body>
+</html>

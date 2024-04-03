@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laundry Systems</title>
+<style>
+  body {
+    text-align: center;
+    position: relative;
+  }
+  h1 {
+    margin-top: 50px;
+  }
+  .machine {
+    display: inline-block;
+    margin: 20px;
+  }
+  .machine img {
+    width: 100px;
+    height: 100px;
+  }
+  .status {
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  .in-use {
+    color: red;
+  }
+  .ready {
+    color: green;
+  }
+  .out-of-order {
+    color: orange;
+  }
+  .sign-out {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  .balance-box {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+  .balance-plus {
+    color: blue;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 5px;
+  }
+</style>
+</head>
+<body>
+  <h1>Laundry Systems</h1>
+  <div class="washing-machines">
+    <div class="machine">
+      <img src="washing_machine.png" alt="Washing Machine">
+      <p class="status in-use">Status: In Use</p>
+    </div>
+    <div class="machine">
+      <img src="washing_machine.png" alt="Washing Machine">
+      <p class="status ready">Status: Ready</p>
+    </div>
+    <div class="machine">
+      <img src="washing_machine.png" alt="Washing Machine">
+      <p class="status out-of-order">Status: Out of Order</p>
+    </div>
+  </div>
+
+  <div class="dryers">
+    <div class="machine">
+      <img src="dryer.png" alt="Dryer">
+      <p class="status in-use">Status: In Use</p>
+    </div>
+    <div class="machine">
+      <img src="dryer.png" alt="Dryer">
+      <p class="status ready">Status: Ready</p>
+    </div>
+    <div class="machine">
+      <img src="dryer.png" alt="Dryer">
+      <p class="status out-of-order">Status: Out of Order</p>
+    </div>
+  </div>
+
+  <div class="balance-box">
+    <h2>Balance: <span id="balanceValue">0</span></h2>
+    <a href="payment.html" class="balance-plus">+</a>
+  </div>
+
+  <a href="index.html" class="sign-out">Sign Out</a>
+
+  <script>
+    // Generate random balance value between 1 and 30
+    document.getElementById('balanceValue').innerText = Math.floor(Math.random() * 30) + 1;
+  </script>
+</body>
+</html>
